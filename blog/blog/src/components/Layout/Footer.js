@@ -10,8 +10,8 @@ function footer() {
 
   return (
     <header style={footerStyle}>
-      <h1 style={{ fontSize: "14px", lineHeight: "1.447em", margin: "0px" }}>
-        Abena's Project 3
+      <h1 style={{ fontSize: "14px", lineHeight: "1.4em", margin: "0px" }}>
+        The Apaws Blog
       </h1>
     </header>
   );

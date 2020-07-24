@@ -14,7 +14,7 @@ const Navbar = () => {
         bg="dark"
         variant="dark"
       >
-        <ReactBootstrap.Navbar.Brand href="#home">
+        <ReactBootstrap.Navbar.Brand href="http://localhost:3000">
           The Apaws Blog
         </ReactBootstrap.Navbar.Brand>
         <ReactBootstrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />

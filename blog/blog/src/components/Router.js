@@ -95,9 +95,9 @@ class Router extends Component {
         return (  
             <BrowserRouter>
  
-                <div className="container">
+                <div>
                 
-                    <div className="row justify-content-center">
+                    <div>
  
                         <Navbar />
  
@@ -151,6 +151,7 @@ class Router extends Component {
                             }} />                            
                         </Switch>
                     </div>
+                    <Footer />
                 </div>            
             </BrowserRouter>
         );
