@@ -1,5 +1,5 @@
 # mern-blog
-This is a MERN project, so it runs on mongodb,  express, react, and node js.
+This is a MERN project, so it runs on mongodb,  express, react, and node js. MondgoDB is databse. Express is the framework. Node js relays the data on the server to the client side. React Js presents the data on the site.
 
 Server is in the config folder and runs on localhost:5000.
 
