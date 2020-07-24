@@ -11,6 +11,7 @@ import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
+import Footer from "./components/layout/Footer";
 // import Form from "http://localhost:3001";
 
 // import Form from "./blog/blog/src/components/Form";
@@ -47,6 +48,7 @@ class App extends Component {
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
               {/* <PrivateRoute exact path="http://localhost:3001" component={Form} /> */}
             </Switch>
+            <Footer />
           </div>
         </Router>
       </Provider>
