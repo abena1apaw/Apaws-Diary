@@ -21,7 +21,7 @@ class Router extends Component {
     }
  
     getPost = () => {
-        axios.get(`http://localhost:3001/posts`)
+        axios.get(`http://localhost:5000/posts`)
              .then( res => {
                  this.setState({
                      posts: res.data
