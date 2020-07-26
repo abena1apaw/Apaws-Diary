@@ -21,7 +21,7 @@ class Router extends Component {
     }
  
     getPost = () => {
-        axios.get(`http://localhost:5000/posts`)
+        axios.get(`http://localhost:5000/Posts`)
              .then( res => {
                  this.setState({
                      posts: res.data
@@ -31,7 +31,7 @@ class Router extends Component {
  
     deletePost = (id) => {
         //console.log(id);
-        axios.delete(`http://localhost:3001/posts/${id}`)
+        axios.delete(`http://localhost:5000/Posts/${id}`)
         .then(res => {
             if (res.status === 200) {
                 const posts = [...this.state.posts];
@@ -46,7 +46,7 @@ class Router extends Component {
     }
  
     createPost = (post) => {
-        axios.post(`https://jsonplaceholder.typicode.com/posts`, {post})
+        axios.post(`https://jsonplaceholder.typicode.com/Posts`, {post})
              .then(res => {
                  if (res.status === 201) {
                     Swal.fire(
@@ -68,7 +68,7 @@ class Router extends Component {
     editPost = (postUpdate) => {
         const {id} = postUpdate;
  
-        axios.put(`http://localhost:3001/posts/${id}`, {postUpdate})
+        axios.put(`http://localhost:5000/Posts/${id}`, {postUpdate})
              .then(res => {
                  if (res.status === 200) {
                     Swal.fire(
@@ -79,7 +79,7 @@ class Router extends Component {
  
                     let postId = res.data.id;
  
-					const posts = [...this.state.posts];
+					       const posts = [...this.state.posts];
  
                     const postEdit = posts.findIndex(post => postId === post.id)
  
@@ -111,7 +111,7 @@ class Router extends Component {
                                 );
                             }} />
  
-                            <Route exact path="/post/:postId" render={ (props) => {
+                            <Route exact path="/Post/:postId" render={ (props) => {
                                 let idPost = props.location.pathname.replace('/post/', '')
  
                                 const posts=this.state.posts;

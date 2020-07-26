@@ -27,12 +27,12 @@ mongoose
   .catch(err => console.log(err));
 
 
-  blogRoutes.route("/").get(function (req, res) {
-  Blog.find(function (err, blog) {
+   blogRoutes.route("/").get(function (req, res) {
+  Blog.find(function (err, blogs) {
   if (err) {
   console.log(err);
       } else {
-  res.json(blog);
+  res.json(blogs);
       }
     });
   });
@@ -73,7 +73,7 @@ mongoose
          res.status(400).send("Update not possible");
         });
     });
-  });
+  }); 
   
   
 // Passport middleware

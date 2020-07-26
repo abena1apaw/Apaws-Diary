@@ -15,7 +15,7 @@ const BlogSchema = new Schema({
     required: true
   },
   category: {
-    type: string,
+    type: String,
     default: Date.now
   }
 });
