@@ -22,9 +22,11 @@ In the package json of the backend, I installed the new dependencies and added a
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.25",
 
-I added blog. js to the api folder to get blogs saved.
+I added blog. js to the api folder to get blogs saved. 
 
 I added bootstrap to the blog by importing bootsrap into the router.js in the components of the blog file.
-I added bootstrap to the client side by importing the same bootstrap. I added aNavbar. js to the blog and client. I included a footerjs to the blog and client.
-I modified the router by removing a div class to make the navbar broader.
+I added bootstrap to the client side by importing the same bootstrap. I added a Navbar. js to the blog and client. I included a footerjs to the blog and client.
+I modified the router by removing a div class to make the navbar broader. I also deleted the edit post from router.js. I changed the css for the login/auth app.
 I added a proxy link to the package JSON to the blog and client.
+
+I added a blog route to the server.js to save to mongo. I added cors to the server.js

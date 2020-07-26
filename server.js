@@ -7,7 +7,7 @@ const users = require("./routes/api/users");
 const blogs = require("./routes/api/blogs");
 const app = express();
 const blogRoutes = express.Router();
-// Bodyparser middleware
+
 app.use(cors());
 app.use(
   bodyParser.urlencoded({

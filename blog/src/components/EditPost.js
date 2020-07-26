@@ -52,7 +52,7 @@ class EditPost extends Component {
                 </select>
                 </div>
  
-                <button type="submit" className="btn btn-primary" >Save changes</button>
+                <button type="submit" className="btn btn-primary" >Submit</button>
             </form>
         );
     }

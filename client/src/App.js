@@ -27,9 +27,9 @@ if (localStorage.jwtToken) {
  
   store.dispatch(setCurrentUser(decoded));
 // Check for expired token
-  const currentTime = Date.now() / 1000; // to get in milliseconds
+  const currentTime = Date.now() / 1000; 
   if (decoded.exp < currentTime) {
-    // Logout user
+    
     store.dispatch(logoutUser());
     // Redirect to login
     window.location.href = "./login";
