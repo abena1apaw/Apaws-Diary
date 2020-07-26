@@ -25,7 +25,7 @@ class SinglePost extends Component {
                     <p><b>Category:</b> {category}</p>
                     <Divider light />
                     <h5>Create At: {moment(datestamp).format('DD MM YYYY')}</h5>
-                    <div style={{ width: '60%' }}>{renderHTML(body)}</div>
+                    <div style={{ width: '50%' }}>{renderHTML(body)}</div>
                 </Paper>
             </React.Fragment>
         )
