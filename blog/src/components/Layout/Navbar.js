@@ -26,7 +26,7 @@ const Navbar = () => {
               </ReactBootstrap.Nav.Link>
             </Link>
             <Link to="./create">
-              <ReactBootstrap.Nav.Link href="#Register">
+              <ReactBootstrap.Nav.Link href="#Blog">
                 Add New Post
               </ReactBootstrap.Nav.Link>
             </Link>

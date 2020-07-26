@@ -65,31 +65,31 @@ class Router extends Component {
              })
     }
  
-    editPost = (postUpdate) => {
-        const {id} = postUpdate;
+    // editPost = (postUpdate) => {
+    //     const {id} = postUpdate;
  
-        axios.put(`http://localhost:5000/Posts/${id}`, {postUpdate})
-             .then(res => {
-                 if (res.status === 200) {
-                    Swal.fire(
-                        'Post Updated',
-                        'The changes were saved correctly.',
-                        'success'
-                    )
+    //     axios.put(`http://localhost:5000/Posts/${id}`, {postUpdate})
+    //          .then(res => {
+    //              if (res.status === 200) {
+    //                 Swal.fire(
+    //                     'Post Updated',
+    //                     'The changes were saved correctly.',
+    //                     'success'
+    //                 )
  
-                    let postId = res.data.id;
+    //                 let postId = res.data.id;
  
-					       const posts = [...this.state.posts];
+	// 				       const posts = [...this.state.posts];
  
-                    const postEdit = posts.findIndex(post => postId === post.id)
+    //                 const postEdit = posts.findIndex(post => postId === post.id)
  
-                    posts[postEdit] = postUpdate;
-                    this.setState({
-                        posts 
-                    })
-                 }
-             })
-    }
+    //                 posts[postEdit] = postUpdate;
+    //                 this.setState({
+    //                     posts 
+    //                 })
+    //              }
+    //          })
+    // }
  
     render() { 
         return (  
@@ -135,7 +135,7 @@ class Router extends Component {
                                 );
                             }}
                             />
-                            <Route exact path="/edit/:postId" render={ (props) => {
+                             {/* <Route exact path="/edit/:postId" render={ (props) => {
                                 let idPost = props.location.pathname.replace('/edit/', '')
                                 const posts=this.state.posts;
                                 let filter;
@@ -146,9 +146,9 @@ class Router extends Component {
                                     <EditPost
                                         post={filter[0]} 
                                         editPost={this.editPost}
-                                    />
+                                    /> }
                                 )
-                            }} />                            
+                            }} />                         */}
                         </Switch>
                     </div>
                     <Footer />
