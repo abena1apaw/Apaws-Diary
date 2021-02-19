@@ -18,11 +18,11 @@ return (
               <b>Hey there,</b> {user.name.split(" ")[0]}
               <p className="flow-text grey-text text-darken-1">
                 You are logged into The Apaws{" "}
-                <span style={{ fontFamily: "monospace" }}>Blog</span> app
+                <span style={{ fontFamily: "monospace" }}>Diary</span> app
               </p>
             </h4>
             <h4>
-             <a href="http://localhost:3001">Go to Blog</a></h4>
+             <a href="http://localhost:3001">Go to Diary</a></h4>
             
             <button
               style={{

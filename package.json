@@ -1,16 +1,16 @@
 {
-  "name": "mern-blog",
+  "name": "mern-diary",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",
-"blog-install": "npm install --prefix blog",
+"diary-install": "npm install --prefix diary",
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
-"blog": "npm start --prefix blog",
-    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run blog\""
+"diary": "npm start --prefix diary",
+    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run diary\""
   },
   "author": "Abena",
   "license": "ISC",

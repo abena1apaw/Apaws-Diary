@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 // Create Schema
-const BlogSchema = new Schema({
+const DiarySchema = new Schema({
   title: {
     type: String,
     required: true
@@ -15,8 +15,8 @@ const BlogSchema = new Schema({
     required: true
   },
   category: {
-    type: string,
+    type: String,
     default: Date.now
   }
 });
-module.exports = Blog = mongoose.model("blogs", BlogSchema);
+module.exports = Diary = mongoose.model("diarys", DiarySchema);

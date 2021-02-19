@@ -4,9 +4,9 @@ const bodyParser = require("body-parser");
 const passport = require("passport");
 const cors = require("cors");
 const users = require("./routes/api/users");
-const blogs = require("./routes/api/blogs");
+const diarys = require("./routes/api/diarys");
 const app = express();
-const blogRoutes = express.Router();
+const diaryRoutes = express.Router();
 // Bodyparser middleware
 app.use(cors());
 app.use(
@@ -27,47 +27,47 @@ mongoose
   .catch(err => console.log(err));
 
 
-  blogRoutes.route("/").get(function (req, res) {
-  Blog.find(function (err, blog) {
+  diaryRoutes.route("/").get(function (req, res) {
+  Diary.find(function (err, diarys) {
   if (err) {
   console.log(err);
       } else {
-  res.json(blog);
+  res.json(diarys);
       }
     });
   });
    
-  blogRoutes.route("/:id").get(function (req, res) {
+  diaryRoutes.route("/:id").get(function (req, res) {
   let id = req.params.id;
-  Blog.findById(id, function (err, blog) {
-  res.json(blog);
+  Diary.findById(id, function (err, diary) {
+  res.json(diary);
     });
   });
    
-  blogRoutes.route("/add").post(function (req, res) {
-  let blog = new Blog(req.body);
-  blog
+  diaryRoutes.route("/add").post(function (req, res) {
+  let diary = new Diary(req.body);
+  diary
       .save()
-      .then((blog) => {
-  res.status(200).json({ blog:"blog added successfully" });
+      .then((diary) => {
+  res.status(200).json({ diary:"diary added successfully" });
       })
       .catch((err) => {
-  res.status(400).send("adding new blog failed");
+  res.status(400).send("adding new diary failed");
       });
   });
    
-  blogRoutes.route("/update/:id").post(function (req, res) {
-  Blog.findById(req.params.id, function (err, blog) {
-  if (!blog) res.status(404).send("data is not found");
-  else blog.blog_title = req.body.blog_title;
-  blog.blog_author = req.body.blog_author;
-  blog.blog_content = req.body.blog_content;
-  blog.blog_category = req.body.blog_category;
+  diaryRoutes.route("/update/:id").post(function (req, res) {
+  Diary.findById(req.params.id, function (err, diary) {
+  if (!diary) res.status(404).send("data is not found");
+  else diary.diary_title = req.body.diary_title;
+  diary.diary_author = req.body.diary_author;
+  diary.diary_content = req.body.diary_content;
+  diary.diary_category = req.body.diary_category;
    
-  blog
+  diary
         .save()
-        .then((blog) => {
-         res.json("Blog updated");
+        .then((diary) => {
+         res.json("Diary updated");
         })
         .catch((err) => {
          res.status(400).send("Update not possible");
@@ -82,6 +82,6 @@ app.use(passport.initialize());
 require("./config/passport")(passport);
 // Routes
 app.use("/api/users", users);
-app.use("/api/blogs", blogs);
+app.use("/api/diarys", diarys);
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server up and running on port ${port} !`));

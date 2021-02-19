@@ -14,7 +14,7 @@ import Dashboard from "./components/dashboard/Dashboard";
 import Footer from "./components/layout/Footer";
 // import Form from "http://localhost:3001";
 
-// import Form from "./blog/blog/src/components/Form";
+// import Form from "./diary/diary/src/components/Form";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {

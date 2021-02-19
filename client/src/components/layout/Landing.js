@@ -6,7 +6,7 @@ class Landing extends Component {
       <div style={{ height: "25vh" }} className="container valign-wrapper">
         <div className="row">
           <div className="col s12 center-align">
-            <h4>The Apaws blog</h4>
+            <h4>The Apaws diary</h4>
             <p className="flow-text grey-text text-darken-1">
               
             </p>

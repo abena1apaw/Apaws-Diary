@@ -4,8 +4,8 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const keys = require("../../config/keys");
 // Load input validation
-const validateRegisterInput = require("../../validation/register");
-const validateLoginInput = require("../../validation/login");
+const validateRegisterData = require("../../validation/register");
+const validateLoginData = require("../../validation/login");
 // Load User model
 const User = require("../../models/User");
 // @route POST api/users/register
@@ -13,7 +13,7 @@ const User = require("../../models/User");
 // @access Public
 router.post("/register", (req, res) => {
     // Form validation
-  const { errors, isValid } = validateRegisterInput(req.body);
+  const { errors, isValid } = validateRegisterData(req.body);
   // Check validation
     if (!isValid) {
       return res.status(400).json(errors);
@@ -43,7 +43,7 @@ router.post("/register", (req, res) => {
   });
   router.post("/login", (req, res) => {
     // Form validation
-  const { errors, isValid } = validateLoginInput(req.body);
+  const { errors, isValid } = validateLoginData(req.body);
   // Check validation
     if (!isValid) {
       return res.status(400).json(errors);
